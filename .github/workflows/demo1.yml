@@ -2,11 +2,11 @@ name: Events Demo 1
 on:
   pull_request:
     types: opened
-    branches: [main, "dev-*", "feat/**"]
+    branches: [main, "dev-*", "feat/**"] # these are pull request target branches
   workflow_dispatch:
   push:
     branches: [main, "dev-*", "feat/**"]
-    # paths-ignore: [".github/workflows/*"]
+    paths-ignore: [".github/workflows/*"]
 jobs:
   deploy:
     runs-on: ubuntu-latest
